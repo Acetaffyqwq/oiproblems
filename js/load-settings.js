@@ -10,5 +10,14 @@ function loadSettings() {
     } else {
         document.documentElement.setAttribute('showBanner', false)
     }
+
+    if (window.location.pathname.substring(1, 11) == "innerWorld" ||
+        window.location.pathname.substring(1, 11) == "innerworld") {
+        if (theme == 'dark') {
+            document.documentElement.setAttribute('theme', 'light')
+        } else {
+            document.documentElement.setAttribute('theme', 'dark')
+        }
+    }
 };
 loadSettings();
